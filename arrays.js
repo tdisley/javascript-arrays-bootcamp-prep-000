@@ -29,11 +29,19 @@ accessElementInArray = function (array, position) {
 }
 
 destructivelyRemoveElementFromBeginningOfArray = function (array) {
-  array.shift;
+  array.shift();
   return array;
 }
 
 removeElementFromBeginningOfArray = function(array) {
-  var first = array.slice(0,1);
+  return array.slice(1);
+}
+
+destructivelyRemoveElementFromEndOfArray = function(array) {
+  array.pop();
   return array;
+}
+
+removeElementFromEndOfArray = function(array) {
+  return array.slice(0, array.length-1);
 }
